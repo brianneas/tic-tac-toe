@@ -1,0 +1,17 @@
+.board {
+  text-align: center;
+}
+
+button {
+  width: 100px;
+  height: 100px;
+  color: white;
+  border-width: 3px;
+  border-color: black;
+  padding: 5px;
+  margin: 2px;
+}
+
+button:active {
+  background-color: black;
+}
