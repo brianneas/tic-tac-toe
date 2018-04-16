@@ -2,14 +2,25 @@
   text-align: center;
 }
 
+.currentPlayer {
+  font-weight: bold;
+}
+
+p {
+  text-align: center;
+  font-size: 25px;
+}
+
 button {
   width: 100px;
   height: 100px;
-  color: white;
+  color: black;
+  background-color: white;
   border-width: 3px;
   border-color: black;
   padding: 5px;
   margin: 2px;
+  font-size: 50px;
 }
 
 button:active {
