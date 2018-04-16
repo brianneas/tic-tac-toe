@@ -22,7 +22,3 @@ button {
   margin: 2px;
   font-size: 50px;
 }
-
-button:active {
-  background-color: black;
-}
