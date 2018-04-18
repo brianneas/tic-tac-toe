@@ -1,17 +1,33 @@
+.gameSetUp {
+  display: inline-block;
+  text-align: center;
+  width: 100%;
+}
+
+.choosePlayer {
+  display: inline-block;
+  font-size: 25px;
+}
+
+.startGame {
+  display: block;
+  margin: auto;
+  font-size: 25px;
+}
+
 .board {
   text-align: center;
+}
+
+.gameDisplay {
+  display: none;
 }
 
 .currentPlayer {
   font-weight: bold;
 }
 
-p {
-  text-align: center;
-  font-size: 25px;
-}
-
-button {
+.button {
   width: 100px;
   height: 100px;
   color: black;
@@ -21,4 +37,13 @@ button {
   padding: 5px;
   margin: 2px;
   font-size: 50px;
+}
+
+.font {
+  font-family: Arial;
+}
+
+p {
+  text-align: center;
+  font-size: 25px;
 }

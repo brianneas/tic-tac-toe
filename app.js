@@ -1,4 +1,4 @@
-const currentPlayer = ['X']
+const currentPlayer = []
 const player1 = 'X'
 const player2 = 'O'
 
@@ -9,7 +9,12 @@ const board = [
 ]
 
 $(document).ready(function() {
-  displayPlayer()
+  $('.startGame').on('click', function(event) {
+    currentPlayer.push($('.selector option:selected').text())
+    displayPlayer()
+    $('.gameSetUp').hide()
+    $('.gameDisplay').show()
+  })
 
   $('.button').on('click', function(event) {
     if ($(event.target).html() === '-') {
