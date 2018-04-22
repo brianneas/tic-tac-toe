@@ -1,3 +1,5 @@
+/* Game Set Up */
+
 .gameSetUp {
   display: inline-block;
   text-align: center;
@@ -15,16 +17,27 @@
   font-size: 25px;
 }
 
-.board {
-  text-align: center;
-}
+/* Game Display */
 
 .gameDisplay {
   display: none;
 }
 
+.currentPlayerDisplay {
+  text-align: center;
+  width: 100%;
+}
+
 .currentPlayer {
   font-weight: bold;
+}
+
+.player {
+  display: inline-block;
+}
+
+.board {
+  text-align: center;
 }
 
 .button {

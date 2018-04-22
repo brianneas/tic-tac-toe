@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <script src="https://code.jquery.com/jquery-3.3.1.js" crossorigin="anonymous"></script>
     <script src="app.js"></script>
+    <script src="check-board.js"></script>
     <link rel="stylesheet" href="styles.css">
     <title>Tic Tac Toe</title>
   </head>
@@ -17,8 +18,10 @@
       <button type="button" class="startGame">Submit</button>
     </div>
     <div class="gameDisplay">
-      <p class="font">Current Player:</p>
-      <p class="currentPlayer font"></p>
+      <div class="currentPlayerDisplay">
+        <p class="player font">Current Player:</p>
+        <p class="player currentPlayer font"></p>
+      </div>
       <div class="board">
         <div>
           <button type="button" class="button" id="00">-</button>
