@@ -60,3 +60,15 @@ p {
   text-align: center;
   font-size: 25px;
 }
+
+/* Switch Player */
+.switchPlayer {
+  display: none;
+  padding: 20px;
+}
+
+.playerSwitchButton {
+  display: block;
+  margin: auto;
+  font-size: 25px;
+}

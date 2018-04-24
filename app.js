@@ -8,12 +8,21 @@ $(document).ready(function() {
     displayPlayer()
     $('.gameSetUp').hide()
     $('.gameDisplay').show()
+    $('.switchPlayer').show()
   })
 
-  $('.button').on('click', function(event) {
+  $('.cell').on('click', function(event) {
     if ($(event.target).html() === '-') {
       play($(event.target))
     }
+  })
+
+  $('.playerSwitchButton').on('click', function(event) {
+    resetBoard()
+    clearCurrentPlayerHistory()
+    $('.gameDisplay').hide()
+    $('.switchPlayer').hide()
+    $('.gameSetUp').show()
   })
 })
 
@@ -53,4 +62,8 @@ function addToBoard(place) {
   })
 
   board[currentPlace[0]][currentPlace[1]] = currentPlayer[currentPlayer.length - 1]
+}
+
+function clearCurrentPlayerHistory() {
+  currentPlayer.length = 0
 }

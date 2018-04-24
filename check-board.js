@@ -99,15 +99,20 @@ function draw() {
 }
 
 function resetBoard(messageClass) {
+  eraseBoard()
+
+  const messageSelector = `.${messageClass}`
+
+  $(messageSelector).remove()
+  $('.currentPlayerDisplay').show()
+}
+
+function eraseBoard() {
   board.forEach(row => {
     row.forEach((cell, index, array) => {
       array[index] = ''
     })
   })
 
-  const messageSelector = `.${messageClass}`
-
-  $(messageSelector).remove()
   $('.button').html('-')
-  $('.currentPlayerDisplay').show()
 }
