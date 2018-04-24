@@ -8,7 +8,6 @@ $(document).ready(function() {
     displayPlayer()
     $('.gameSetUp').hide()
     $('.gameDisplay').show()
-    $('.switchPlayer').show()
   })
 
   $('.cell').on('click', function(event) {
@@ -21,8 +20,11 @@ $(document).ready(function() {
     resetBoard()
     clearCurrentPlayerHistory()
     $('.gameDisplay').hide()
-    $('.switchPlayer').hide()
     $('.gameSetUp').show()
+  })
+
+  $('.resetButton').on('click', function(event) {
+    resetBoard()
   })
 })
 

@@ -61,14 +61,16 @@ p {
   font-size: 25px;
 }
 
-/* Switch Player */
-.switchPlayer {
-  display: none;
-  padding: 20px;
-}
-
-.playerSwitchButton {
+/* Game Options */
+.gameOptionButton {
   display: block;
   margin: auto;
   font-size: 25px;
+  padding: 10px;
+  width: 300px;
+}
+
+/* Switch Player */
+.switchPlayer {
+  padding: 20px 0px 10px 0px;
 }
