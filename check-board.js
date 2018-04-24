@@ -5,6 +5,10 @@ const board = [
 ]
 
 function checkBoard() {
+  if (checkFullBoard()) {
+    draw()
+  }
+
   if (
     checkHorizontal(board) ||
     checkVertical() ||
@@ -61,37 +65,49 @@ function checkRow(row) {
 }
 
 function checkFullBoard() {
-  board.forEach(row => {
+  return board.every(row => {
     if (row.every(cell => {
-      if (cell !== '') {
-        return cell
-      }
+      return cell !== ''
     })) {
-      // TODO Add what to do with full board
+      return row
     }
   })
 }
 
 function winner() {
   const winnerMessage = currentPlayer[currentPlayer.length - 1] + ' won!'
-  const winner = $('<p class="font winnerMessage"></p>').html(winnerMessage)
+  const messageClass = 'winnerMessage'
+  const winner = $(`<p class="font ${messageClass}"></p>`).html(winnerMessage)
 
   $('.currentPlayerDisplay').hide()
   $('.gameDisplay').prepend(winner)
 
-  window.setTimeout(resetBoard, 5000)
+  window.setTimeout(function() { resetBoard(messageClass) }, 5000)
 
   return true
 }
 
-function resetBoard() {
+function draw() {
+  const drawText = 'It\'s a draw.'
+  const messageClass = 'drawMessage'
+  const drawMessage = $(`<p class="font ${messageClass}"></p>`).html(drawText)
+
+  $('.currentPlayerDisplay').hide()
+  $('.gameDisplay').prepend(drawMessage)
+
+  window.setTimeout(function() { resetBoard(messageClass) }, 5000)
+}
+
+function resetBoard(messageClass) {
   board.forEach(row => {
     row.forEach((cell, index, array) => {
       array[index] = ''
     })
   })
 
-  $('.winnerMessage').remove()
+  const messageSelector = `.${messageClass}`
+
+  $(messageSelector).remove()
   $('.button').html('-')
   $('.currentPlayerDisplay').show()
 }
